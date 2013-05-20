@@ -10,4 +10,23 @@
  *
  *= require_self
  *= require_tree .
+ *= require_ace.min
+ *= require_ace-ie.min
+ *= require_ace-responsive.min
+ *= require_ace-skins.min
+ *= require_bootstrap.min
+ *= require_bootstrap-responsive.min
+ *= require_bootstrap-timepicker
+ *= require_chosen
+ *= require_colorbox
+ *= require_colorpicker
+ *= require_datepicker
+ *= require_daterangepicker
+ *= require_font-awesome.min
+ *= require_font-awesome-ie7.min
+ *= require_fullcalendar
+ *= require_jquery.gritter
+ *= require_jquery.simplecolorpicker
+ *= require_jquery-ui-1.10.2.custom.min
+ *= require_prettify
  */
