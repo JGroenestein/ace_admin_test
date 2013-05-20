@@ -1,4 +1,10 @@
 AceAdminTest::Application.routes.draw do
+  get "ace_admin_panel/elements"
+
+  get "ace_admin_panel/buttons"
+
+  get "ace_admin_panel/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
