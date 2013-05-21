@@ -13,4 +13,16 @@
     </libraries>
     <schema name="" catalog=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails ace_admin_test: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b1f486a2-741d-47cf-a12d-367e4a9cbdfe">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:C:\Sites\rails_projects\ace_admin_test\db\production.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
 </component>
