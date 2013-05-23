@@ -1,9 +1,12 @@
 AceAdminTest::Application.routes.draw do
-  get "ace_admin_panel/elements"
 
-  get "ace_admin_panel/buttons"
+  root :to => 'ace_admin_panel#index'
 
-  get "ace_admin_panel/index"
+  match '/elements', to: 'ace_admin_panel#elements'
+
+  match '/buttons',  to: 'ace_admin_panel#buttons'
+
+  match '/login',    to: 'ace_admin_panel#login'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

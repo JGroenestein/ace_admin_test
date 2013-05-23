@@ -100,11 +100,11 @@
 
     <ul class="nav nav-list">
       <li>
-        <a href="index.html">
+
+        <%= link_to root_path do %>
           <i class="icon-dashboard"></i>
           <span>Dashboard</span>
-
-        </a>
+        <% end %>
       </li>
 
 
@@ -115,8 +115,8 @@
           <b class="arrow icon-angle-down"></b>
         </a>
         <ul class="submenu">
-          <li><a href="elements.html"><i class="icon-double-angle-right"></i> Elements</a></li>
-          <li><a href="buttons.html"><i class="icon-double-angle-right"></i> Buttons & Icons</a></li>
+          <li><%= link_to elements_path do %><i class="icon-double-angle-right"></i> Elements<% end %></li>
+          <li><%= link_to buttons_path do %><i class="icon-double-angle-right"></i> Buttons & Icons<% end %></li>
         </ul>
       </li>
     </ul><!--/.nav-list-->
