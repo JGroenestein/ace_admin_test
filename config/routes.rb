@@ -1,12 +1,13 @@
 AceAdminTest::Application.routes.draw do
+  resources :users
 
-  root :to => 'ace_admin_panel#index'
+  root :to => 'users#login'
 
   match '/elements', to: 'ace_admin_panel#elements'
 
   match '/buttons',  to: 'ace_admin_panel#buttons'
 
-  match '/login',    to: 'ace_admin_panel#login'
+  match '/users',     to: 'users#login.html'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

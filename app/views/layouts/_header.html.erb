@@ -60,9 +60,10 @@
 
         <li class="light-blue user-profile">
           <a class="user-menu dropdown-toggle" href="#" data-toggle="dropdown">
-            <%= image_tag "avatars/avatar2.png", class: "nav-user-photo" %>
+            <%= gravatar_for @user %>
+
             <span id="user_info">
-								<small>Welcome,</small> User
+								<small>Welcome,</small> <%= @user.name %>
 							</span>
             <i class="icon-caret-down"></i>
           </a>
