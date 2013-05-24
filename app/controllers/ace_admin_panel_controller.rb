@@ -1,13 +1,13 @@
 class AceAdminPanelController < ApplicationController
   def elements
+    @user = User.find(params[:id])
   end
 
   def buttons
+    @user = User.find(params[:id])
   end
 
   def index
-  end
-
-  def login
+    @user = User.find(params[:id])
   end
 end
