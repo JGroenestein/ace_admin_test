@@ -1,13 +1,30 @@
 class AceAdminPanelController < ApplicationController
   def elements
-    @user = User.find(params[:id])
+    if signed_in?
+      @user = current_user
+      render 'elements'
+    else
+      render 'sessions/new'
+    end
   end
 
+
   def buttons
-    @user = User.find(params[:id])
+    if signed_in?
+      @user = current_user
+      render 'buttons'
+    else
+      render 'sessions/new'
+    end
   end
 
   def index
-    @user = User.find(params[:id])
+
+    if signed_in?
+      @user = current_user
+      render 'index'
+    else
+      render 'sessions/new'
+    end
   end
 end

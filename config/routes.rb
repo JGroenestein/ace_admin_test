@@ -1,13 +1,17 @@
 AceAdminTest::Application.routes.draw do
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
-  root :to => 'users#login'
+  root :to => 'ace_admin_panel#index'
+
+  match '/signup',   to: 'users#login'
+  match '/signin',   to: 'sessions#new'
+  match '/signout',  to: 'sessions#destroy', via: :delete
+  match '/signout',  to: 'sessions#destroy'
 
   match '/elements', to: 'ace_admin_panel#elements'
-
   match '/buttons',  to: 'ace_admin_panel#buttons'
-
-  match '/users',     to: 'users#login.html'
+  match '/users',    to: 'users#login.html'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

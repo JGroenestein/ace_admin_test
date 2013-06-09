@@ -5,12 +5,13 @@ class UsersController < ApplicationController
 
   def login
     @user = User.new
-    @failed_form = false
+    @failed_form = true
   end
 
   def create
     @user = User.new(params[:user])
     if @user.save
+      sign_in @user
       flash[:success] = "New user successfully created"
       redirect_to @user
     else
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
 
   def index
     @user = User.new
-    @failed_form = false
+    @failed_form = true
     render 'login'
   end
 end

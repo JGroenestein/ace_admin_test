@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Login Page - Ace Admin</title>
+  <title>Register Page</title>
   <meta name="description" content="User login page" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -186,7 +186,7 @@
 
 
                   <div class="toolbar center">
-                    <a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link"><i class="icon-arrow-left"></i> Back to login</a>
+                    <%= link_to (raw('<i class="icon-arrow-left"></i> Back to login</a>')), signin_path, { :class => "back-to-login-link"} %>
                   </div>
 
                 </div><!--/widget-body-->

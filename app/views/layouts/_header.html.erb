@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title> Page Ttitle </title>
+  <title><%= yield(:title) %></title>
   <meta name="description" content="" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,7 +70,7 @@
           <ul id="user_menu" class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
             <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
             <li class="divider"></li>
-            <li><a href="#"><i class="icon-off"></i> Logout</a></li>
+            <li></i><%= link_to (raw('<i class="icon-off"></i> Logout</a>')), signout_path, method: "delete" %></li>
           </ul>
         </li>
       </ul><!--/nav-->
