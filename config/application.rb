@@ -67,5 +67,6 @@ module AceAdminTest
 
     #Getting Fonts-Awesome to work in Ruby
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
   end
 end

@@ -1,5 +1,57 @@
 <% title "Dashboard" %>
 <%= render 'layouts/header' %>
+
 <%= yield %>
+
+<div class="row-fluid">
+  <div class="span11">
+    <div class="widget-box">
+      <div class="widget-header">
+        <h4>Smokeping Generator</h4>
+          <span class="widget-toolbar">
+            <a href="#" data-action="collapse">
+              <i class="icon-chevron-up"></i>
+            </a>
+          </span>
+      </div>
+
+      <div class="widget-body">
+        <div class="widget-main">
+            <form name="myform">
+
+            <div class="row-fluid">
+              <label for="inputtext">Input Text</label>
+              <textarea id="inputtext" rows="10" class="span12"></textarea>
+            </div>
+
+            <hr />
+
+            <div class="row-fluid">
+              <label for="outputtext">Output Text</label>
+              <textarea id="outputtext"rows="10" class="span12"></textarea>
+            </div>
+
+            </form>
+
+            <hr />
+
+            <div class="row-fluid">
+              <button class="btn btn-info" onClick="addtext();">
+                <i class="icon-ok bigger-110"></i>
+                Submit
+              </button>
+
+              &nbsp; &nbsp; &nbsp;
+              <button class="btn" type="reset" onclick="clearContents(inputtext), clearContents(outputtext)">
+                <i class="icon-undo bigger-110"></i>
+                Reset
+              </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/span-->
+
 <%= debug(params) if Rails.env.development? %>
 <%= render 'layouts/footer' %>

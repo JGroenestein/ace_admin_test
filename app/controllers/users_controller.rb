@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "New user successfully created"
-      redirect_to @user
+      redirect_to root_path
     else
       @failed_form = true
       render 'login'
