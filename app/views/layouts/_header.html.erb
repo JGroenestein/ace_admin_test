@@ -147,9 +147,20 @@
       </div><!--#nav-search-->
     </div><!--#breadcrumbs-->
 
-
-
     <div id="page-content" class="clearfix">
+      <div class="page-header position-relative">
+        <h1>
+          <%= yield(:title) %>
+          <small>
+            <i class="icon-double-angle-right"></i>
+            <%= yield(:page_description) %>
+          </small>
+        </h1>
+      </div><!--/.page-header-->
+
+
+
+      <div id="page-content" class="clearfix">
 
 
       <div class="row-fluid">

@@ -4,10 +4,21 @@
 
 <div class="row-fluid">
   <div class="span12">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-block alert-<%= key %>">
+        <button type="button" class="close" data-dismiss="alert">
+          <i class="icon-remove"></i>
+        </button>
+        <i class="icon-ok green"></i>
+        <%= value %>
+      </div>
+
+    <% end %>
+
     <div class="widget-box">
       <div class="widget-header widget-header-blue widget-header-flat wi1dget-header-large">
 
-        <h4>Update your profile</h4>
+        <h4>Profile Settings</h4>
       </div>
 
       <div class="widget-body">
