@@ -64,7 +64,9 @@
 
 
                         <%= form_for(:session, url: sessions_path) do |f| %>
-
+                          <% flash.each do |key, value| %>
+                            <div class="alert alert-<%= key %>"><%= value %></div>
+                          <% end %>
                           <label>
                             <span class="block input-icon input-icon-right">
                               <%= f.text_field :email, :class => "span12", :placeholder => "Email" %>

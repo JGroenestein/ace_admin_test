@@ -11,18 +11,20 @@
   <%= stylesheet_link_tag "bootstrap.min" %>
   <%= stylesheet_link_tag "bootstrap-responsive.min" %>
   <%= stylesheet_link_tag "font-awesome.min" %>
+
   <!--[if IE 7]>
     <%= stylesheet_link_tag "font-awesome-ie7.min" %>
   <![endif]-->
 
-
   <!-- page specific plugin styles -->
-
+  <%= stylesheet_link_tag "jquery-ui-1.10.3.custom.min" %>
+  <%= stylesheet_link_tag "assets/css/jquery.gritter" %>
 
   <!-- ace styles -->
   <%= stylesheet_link_tag "ace.min" %>
   <%= stylesheet_link_tag "ace-responsive.min" %>
   <%= stylesheet_link_tag "ace-skins.min" %>
+
   <!--[if lt IE 9]>
   <%= stylesheet_link_tag "ace-ie" %>
   <![endif]-->
@@ -35,7 +37,7 @@
     <div class="container-fluid">
 
 
-      <a class="brand" href="#"><small><i class="icon-cloud"></span></i> <span class="red">Test</span> <span class="white">Heimdall </small> </a>
+      <a class="brand" href="/"><small><i class="icon-cloud"></span></i> <span class="red">Test</span> <span class="white">Heimdall </small> </a>
       <ul class="nav pull-right ace-nav">
         <li class="grey">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -68,9 +70,10 @@
             <i class="icon-caret-down"></i>
           </a>
           <ul id="user_menu" class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
-            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+            <li><%= link_to (raw('<i class="icon-cog"></i> Settings')), edit_user_path(current_user) %></li>
+            <li><%= link_to (raw('<i class="icon-group"></i> Users')), users_path, method: "delete" %></li>
             <li class="divider"></li>
-            <li></i><%= link_to (raw('<i class="icon-off"></i> Logout</a>')), signout_path, method: "delete" %></li>
+            <li><%= link_to (raw('<i class="icon-off"></i> Logout')), signout_path, method: "delete" %></li>
           </ul>
         </li>
       </ul><!--/nav-->

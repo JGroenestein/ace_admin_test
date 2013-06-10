@@ -1,0 +1,39 @@
+<% title "Update Profile" %>
+<%= render 'layouts/header' %>
+<%= yield %>
+
+<div class="row-fluid">
+  <div class="span12">
+    <div class="widget-box">
+      <div class="widget-header widget-header-blue widget-header-flat wi1dget-header-large">
+
+        <h4>Update your profile</h4>
+      </div>
+
+      <div class="widget-body">
+        <div class="widget-main padding-36">
+          <%= agravatar_for @user, size: 100 %>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://gravatar.com/emails">Edit Avatar</a>
+          <hr>
+          <%= form_for(@user) do |f| %>
+            <%= render 'error_messages' %>
+
+            <%= f.label :name, :class => "control-label" %><%= f.text_field :name %>
+
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+
+            <%= f.label :password_confirmation, "Confirm Password" %>
+            <%= f.password_field :password_confirmation %>
+            <hr>
+            <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

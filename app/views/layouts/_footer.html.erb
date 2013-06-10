@@ -20,8 +20,10 @@
       </div>
       <span>&nbsp; Choose Skin</span>
     </div>
-    <div><input type="checkbox" class="ace-checkbox-2" id="ace-settings-header" /><label class="lbl" for="ace-settings-header"> Fixed Header</label></div>
-    <div><input type="checkbox" class="ace-checkbox-2" id="ace-settings-sidebar" /><label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label></div>
+    <br />
+    <button class="btn btn-mini btn-info btn-block">Save</button>
+    <br />
+    <br />
   </div>
 </div><!--/#ace-settings-container-->
 
@@ -40,10 +42,16 @@
 
 
 <!-- basic scripts -->
-<%= javascript_include_tag "jquery-1.9.1.min" %>
-<%= javascript_include_tag "bootstrap.min" %>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.jQuery || document.write("<script src='assets/js/jquery-1.9.1.min.js'>"+"<"+"/script>");
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
 
 <!-- page specific plugin scripts -->
+<%= javascript_include_tag "jquery-1.9.1.min" %>
+<%= javascript_include_tag "bootstrap.min" %>
+<%= javascript_include_tag "bootbox.min" %>
 
 
 <!-- ace scripts -->
@@ -83,6 +91,20 @@
   }
 
 </script>
+
+<script type="text/javascript">
+  $(function() {
+
+    $("#bootbox-confirm").on('click', function() {
+      bootbox.confirm("Are you sure?", function(result) {
+        if(result) {
+          bootbox.alert("User Deleted!");
+        }
+      });
+    });
+  });
+</script>
+
 
 </body>
 </html>

@@ -11,7 +11,7 @@ AceAdminTest::Application.routes.draw do
 
   match '/elements', to: 'ace_admin_panel#elements'
   match '/buttons',  to: 'ace_admin_panel#buttons'
-  match '/users',    to: 'users#login.html'
+  match '/allusers', to: 'ace_admin_panel#allusers'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

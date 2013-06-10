@@ -1,7 +1,17 @@
 <% title "Dashboard" %>
 <%= render 'layouts/header' %>
 
+
 <%= yield %>
+<% flash.each do |key, value| %>
+  <div class="alert alert-block alert-<%= key %>">
+  <button type="button" class="close" data-dismiss="alert">
+  <i class="icon-remove"></i>
+  </button>
+  <i class="icon-ok green"></i>
+  <%= value %>
+  </div>
+<% end %>
 
 <div class="row-fluid">
   <div class="span11">
